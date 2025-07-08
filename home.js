@@ -90,3 +90,43 @@
         });
       });
  
+
+
+
+
+
+      /*------mailto form data ------------------*/
+document.getElementById("contactForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim() || "New Contact Form Submission";
+  const message = document.getElementById("message").value.trim();
+
+  const now = new Date();
+  const submittedAt = now.toLocaleString();
+  const pageURL = window.location.href;
+
+  const body = [
+    `📩 New Message from Contact Form`,
+    ``,
+    `👤 Name: ${name}`,
+    `📧 Email: ${email}`,
+    ``,
+    `📝 Message: ${message}`,
+    ``,
+    `---`,
+    `🌐 Page URL: ${pageURL}`,
+    `📅 Submitted At: ${submittedAt}`,
+    ``,
+    `Sent via website contact form`
+  ].join("\n");
+
+  // Create mailto link and trigger
+  const mailto = `mailto:phixxlabs@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailto;
+
+  // ✅ Clear the form after submission
+  document.getElementById("contactForm").reset();
+});

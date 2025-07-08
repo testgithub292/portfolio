@@ -12,8 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="home.css">
-    
+    <link rel="stylesheet" href="home.css" />
   </head>
   <body>
     <!-- Navigation
@@ -91,7 +90,9 @@
           </div>
           <div class="hero-image">
             <img
-              src="ChatGPT Image Jul 2, 2025, 09_13_55 PM.png" height="400px" width="80%"
+              src="ChatGPT Image Jul 2, 2025, 09_13_55 PM.png"
+              height="400px"
+              width="80%"
               alt="PhixxLabs Solutions"
             />
           </div>
@@ -140,7 +141,9 @@
           </div>
           <div class="about-image">
             <img
-              src="ChatGPT Image Jul 2, 2025, 09_13_55 PM.png" height="550px" width="100%"
+              src="ChatGPT Image Jul 2, 2025, 09_13_55 PM.png"
+              height="550px"
+              width="100%"
               alt="PhixxLabs Team"
             />
           </div>
@@ -214,16 +217,16 @@
             <a href="#" class="btn btn-outline">Learn More</a>
           </div>
           <div class="service-card">
-    <div class="service-icon">
-        <i class="fas fa-server"></i>
-    </div>
-    <h3 class="service-title">Backend Development</h3>
-    <p class="service-desc">
-        Building backend systems using .NET and SQL with a strong understanding of APIs, database design, and application logic.
-    </p>
-    <a href="#" class="btn btn-outline">learn More</a>
-</div>
-
+            <div class="service-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3 class="service-title">Backend Development</h3>
+            <p class="service-desc">
+              Building backend systems using .NET and SQL with a strong
+              understanding of APIs, database design, and application logic.
+            </p>
+            <a href="#" class="btn btn-outline">learn More</a>
+          </div>
         </div>
       </div>
     </section>
@@ -309,45 +312,44 @@
       </div>
     </section>
 
-    <section id="team" style="background-color: #f8f9fa; padding: 60px 20px;">
-  <div class="team-section">
-    <h2 class="team-title">Meet Our Team</h2>
-    <div class="team-container">
-      <!-- Card 1 -->
-      <div class="team-card">
-        <div class="team-image">
-          <img src="ChatGPT Image Jul 2, 2025, 09_13_55 PM.png" alt="Muhammad Zain" />
-        </div>
-        <div class="team-info">
-          <h3 class="team-name">Muhammad Zain</h3>
-          <p class="team-position">Lead Developer & Founder</p>
-          <div class="team-social">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+    <section id="team" style="background-color: #f8f9fa; padding: 60px 20px">
+      <div class="team-section">
+        <h2 class="team-title">Meet Our Team</h2>
+        <div class="team-container">
+          <!-- Card 1 -->
+          <div class="team-card">
+            <div class="team-image">
+              <img src="images/zain img.jpg" alt="Muhammad Zain" />
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Muhammad Zain</h3>
+              <p class="team-position">Lead Developer & UI/UX Designer</p>
+              <div class="team-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="team-card">
+            <div class="team-image">
+              <img src="images/ahmad picture.png" alt="Ahmad Abbas" />
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Muhammad Ahmad</h3>
+              <p class="team-position">Graphic Designer & Video Editor</p>
+              <div class="team-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+                <a href="#"><i class="fab fa-behance"></i></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Card 2 -->
-      <div class="team-card">
-        <div class="team-image">
-          <img src="https://via.placeholder.com/300x400/4d44db/ffffff?text=SA" alt="Ahmad Abbas" />
-        </div>
-        <div class="team-info">
-          <h3 class="team-name">Ahmad Abbas</h3>
-          <p class="team-position">UI/UX Designer</p>
-          <div class="team-social">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-dribbble"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- Contact Section -->
     <section id="contact">
@@ -390,12 +392,15 @@
               </div>
               <div class="contact-text">
                 <h3>Location</h3>
-                <p>Lahore, Pakistan</p>
+                <p>
+                  <b style="color: rgba(0, 0, 255, 0.762)"> Gojra</b> City,
+                  Punjab, Pakistan
+                </p>
               </div>
             </div>
           </div>
           <div class="contact-form">
-            <form>
+            <!-- <form>
               <div class="form-group">
                 <input
                   type="text"
@@ -423,7 +428,22 @@
                 ></textarea>
               </div>
               <button type="submit" class="btn">Send Message</button>
-            </form>
+            </form> -->
+            <form id="contactForm">
+  <div class="form-group">
+    <input type="text" id="name" class="form-control" placeholder="Your Name" required />
+  </div>
+  <div class="form-group">
+    <input type="email" id="email" class="form-control" placeholder="Your Email" required />
+  </div>
+  <div class="form-group">
+    <input type="text" id="subject" class="form-control" placeholder="Subject" />
+  </div>
+  <div class="form-group">
+    <textarea id="message" class="form-control" placeholder="Your Message" required></textarea>
+  </div>
+  <button type="submit" class="btn">Send Message</button>
+</form>
           </div>
         </div>
       </div>
@@ -439,14 +459,10 @@
               development, blockchain, and fintech applications.
             </p>
             <div class="social-links">
-              <a href="#" class="social-link"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <!-- <a href="#" class="social-link"><i class="fab fa-github"></i></a> -->
               <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
+              <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
             </div>
           </div>
           <div class="footer-col">
@@ -460,24 +476,26 @@
             </ul>
           </div>
           <div class="footer-col">
-            <h3>Services</h3>
+            <h3>Why Choose Us?</h3>
             <ul class="footer-links">
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Mobile Development</a></li>
-              <li><a href="#">Blockchain Solutions</a></li>
-              <li><a href="#">Fintech Solutions</a></li>
-              <li><a href="#">UI/UX Design</a></li>
+              <li>Affordable Pricing</li>
+              <li>Creative Solutions</li>
+              <li>On-Time Delivery</li>
+              <li>Modern Designs</li>
+              <li>Client Satisfaction</li>
             </ul>
           </div>
           <div class="footer-col">
             <h3>Contact Info</h3>
             <ul class="footer-links">
               <li>
-                <a href="mailto:phixklabs@gmail.com">phixklabs@gmail.com</a>
+                <a href="mailto:phixxlabs@gmail.com">phixxlabs@gmail.com</a>
               </li>
               <li><a href="tel:03281246298">0328-1246298</a></li>
               <li><a href="tel:03027075521">0302-7075521</a></li>
-              <li>Lahore, Pakistan</li>
+              <li>Gojra City, Punjab, Pakistan</li>
+               <li>Available: All Days (Except Friday), 24 Hours</li>
+
             </ul>
           </div>
         </div>
@@ -487,6 +505,6 @@
       </div>
     </footer>
 
-    <script src="home.js">   </script>
+    <script src="home.js"></script>
   </body>
 </html>
