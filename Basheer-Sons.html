@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Basheer Sons – Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-light: #3b82f6;
+      --dark: #1e293b;
+      --gray: #64748b;
+      --light-gray: #e2e8f0;
+      --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+      --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+      --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      color: var(--dark);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 800px;
+      background: white;
+      padding: 3.5rem;
+      border-radius: 1.5rem;
+      box-shadow: var(--card-shadow);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: var(--transition);
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+      z-index: -1;
+      animation: rotate 15s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .container:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo {
+      margin-bottom: 2.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .logo img {
+      width: 100px;
+      transition: var(--transition);
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+    }
+
+    .logo::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+      opacity: 0.7;
+    }
+
+    .logo:hover img {
+      transform: scale(1.1) rotate(5deg);
+      filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.1));
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: var(--dark);
+      font-weight: 700;
+      line-height: 1.2;
+      position: relative;
+      display: inline-block;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 3px;
+    }
+
+    p {
+      font-size: 1.15rem;
+      margin-bottom: 2.5rem;
+      color: var(--gray);
+      line-height: 1.7;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tag-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
+    .tag {
+      background: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      color: var(--dark);
+      font-weight: 500;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      border: 1px solid var(--light-gray);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tag::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0) 100%);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .tag i {
+      color: var(--primary);
+      transition: var(--transition);
+    }
+
+    .tag:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+      border-color: var(--primary-light);
+    }
+
+    .tag:hover::before {
+      opacity: 1;
+    }
+
+    .tag:hover i {
+      transform: scale(1.2);
+      color: var(--primary-light);
+    }
+
+    .footer-note {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-top: 3rem;
+      opacity: 0.7;
+      position: relative;
+    }
+
+    .footer-note::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 1px;
+      background: var(--light-gray);
+    }
+
+    /* Floating elements animation */
+    .floating-elements {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .floating-element {
+      position: absolute;
+      background: rgba(37, 99, 235, 0.05);
+      border-radius: 50%;
+      animation: float 15s infinite linear;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+      100% { transform: translateY(0) rotate(360deg); }
+    }
+
+    /* Countdown timer */
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .countdown-item {
+      text-align: center;
+      min-width: 80px;
+    }
+
+    .countdown-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.2rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .countdown-number::after {
+      content: ':';
+      position: absolute;
+      right: -1rem;
+      color: var(--gray);
+    }
+
+    .countdown-item:last-child .countdown-number::after {
+      display: none;
+    }
+
+    .countdown-label {
+      font-size: 0.8rem;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Newsletter form */
+    .newsletter {
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      position: relative;
+    }
+
+    .newsletter input {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      border: 1px solid var(--light-gray);
+      font-size: 1rem;
+      transition: var(--transition);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    }
+
+    .newsletter input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+
+    .newsletter button {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .newsletter button:hover {
+      background: var(--primary-light);
+      transform: translateX(3px);
+    }
+
+    /* Social icons */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .social-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      color: var(--gray);
+      border: 1px solid var(--light-gray);
+      transition: var(--transition);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    }
+
+    .social-icon:hover {
+      color: white;
+      background: var(--primary);
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 2.5rem 1.5rem;
+      }
+      
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .countdown {
+        gap: 1rem;
+      }
+      
+      .countdown-item {
+        min-width: 60px;
+      }
+      
+      .countdown-number {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+      
+      .tag {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+      }
+      
+      .newsletter button {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container animate__animated animate__fadeIn">
+    <!-- Floating background elements -->
+    <div class="floating-elements">
+      <div class="floating-element" style="width: 100px; height: 100px; top: 10%; left: 5%; animation-delay: 0s;"></div>
+      <div class="floating-element" style="width: 150px; height: 150px; top: 70%; left: 80%; animation-delay: 2s;"></div>
+      <div class="floating-element" style="width: 80px; height: 80px; top: 40%; left: 70%; animation-delay: 4s;"></div>
+      <div class="floating-element" style="width: 120px; height: 120px; top: 80%; left: 20%; animation-delay: 6s;"></div>
+    </div>
+
+    <div class="logo animate__animated animate__bounceIn">
+      <img src="images/logo-basheer-sons-1st.webp" alt="Basheer Sons Logo" />
+    </div>
+    
+    <h1 class="animate__animated animate__fadeInUp">Coming Soon</h1>
+    
+    <p class="animate__animated animate__fadeInUp animate__delay-1s">
+      Our next-gen e-commerce platform is on its way — built with modern UI, custom CMS, and exceptional product presentation features.
+    </p>
+
+    <!-- Countdown Timer -->
+    <div class="countdown animate__animated animate__fadeInUp animate__delay-1s">
+      <div class="countdown-item">
+        <div class="countdown-number" id="days">00</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="countdown-item">
+        <div class="countdown-number" id="hours">00</div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="countdown-item">
+        <div class="countdown-number" id="minutes">00</div>
+        <div class="countdown-label">Minutes</div>
+      </div>
+      <div class="countdown-item">
+        <div class="countdown-number" id="seconds">00</div>
+        <div class="countdown-label">Seconds</div>
+      </div>
+    </div>
+
+    <!-- Newsletter Form -->
+    <!-- <div class="newsletter animate__animated animate__fadeInUp animate__delay-2s">
+      <input type="email" placeholder="Enter your email for updates..." />
+      <button type="submit">Notify Me</button>
+    </div> -->
+
+    <!-- Social Icons -->
+    <!-- <div class="social-icons animate__animated animate__fadeInUp animate__delay-2s">
+      <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+    </div> -->
+
+    <div class="tag-line animate__animated animate__fadeInUp animate__delay-1s">
+      <span class="tag"><i class="fas fa-store"></i> E-commerce</span>
+      <span class="tag"><i class="fas fa-cogs"></i> Custom CMS</span>
+      <span class="tag"><i class="fas fa-palette"></i> UI/UX</span>
+      <span class="tag"><i class="fas fa-box"></i> Product Design</span>
+      <span class="tag"><i class="fas fa-tags"></i> Labeling</span>
+    </div>
+
+    <div class="footer-note animate__animated animate__fadeInUp animate__delay-3s">
+      © 2025 Basheer Sons. All rights reserved.
+    </div>
+  </div>
+
+  <script>
+    // Countdown Timer
+    function updateCountdown() {
+      const launchDate = new Date('2025-12-31T00:00:00').getTime();
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = days.toString().padStart(2, '0');
+      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+
+    // Initial call and update every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Animate elements on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const animateElements = document.querySelectorAll('.animate__animated');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(entry.target.dataset.animation);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      animateElements.forEach(element => {
+        observer.observe(element);
+      });
+
+      // Logo hover effect
+      const logo = document.querySelector('.logo img');
+      logo.addEventListener('mouseenter', () => {
+        logo.style.transform = 'scale(1.1) rotate(5deg)';
+      });
+      logo.addEventListener('mouseleave', () => {
+        logo.style.transform = 'scale(1)';
+      });
+    });
+  </script>
+
+</body>
+</html>
