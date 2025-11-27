@@ -832,8 +832,31 @@
             resize: vertical;
         }
 
+          .btn-hero {
+            display: inline-block;
+            width: fit-content;
+            text-decoration: none;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-family: "Poppins", sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            /* transition: all 0.3s ease; */
+            margin-top: 20px;
+        }
+
+        .btn-hero:hover {
+            background: var(--secondary);
+            /* transform: translateY(-3px); */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
         .btn {
             display: inline-block;
+            width: 100% !important;
             padding: 12px 30px;
             background: var(--primary);
             color: white;
@@ -843,7 +866,7 @@
             font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
-            width: 100%;
+            text-decoration: none;
         }
 
         .btn:hover {
