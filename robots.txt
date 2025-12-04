@@ -1,0 +1,59 @@
+# ---------------------------
+# 🌐 Global Crawl Settings
+# ---------------------------
+User-agent: *
+Allow: /
+
+# Block sensitive, internal & heavy folders
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /config/
+Disallow: /server/
+Disallow: /backup/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /assets/raw/
+Disallow: /node_modules/
+
+# Block dynamic URLs (SEO improvement)
+Disallow: /*?*
+Disallow: /*&*
+Disallow: /*search*
+Disallow: /*filter*
+Disallow: /*sort*
+
+# ---------------------------
+# 🤖 Block Bad Bots (Security)
+# ---------------------------
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: Python-urllib
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+# ---------------------------
+# ⚡ Crawl Optimization
+# ---------------------------
+# Prevent server overload
+Crawl-delay: 3
+
+
+# ---------------------------
+# 🗺 Sitemap
+# ---------------------------
+Sitemap: https://phixxlabs.com/sitemap.xml
